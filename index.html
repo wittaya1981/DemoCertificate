@@ -105,9 +105,9 @@ const BUCKET = 'sto_certificates';  // ชื่อ Storage bucket (ตั้ง
 /* =========================== */
 
 const $ = id => document.getElementById(id);
-const configured = !SUPABASE_URL.includes('YOUR-PROJECT');
+const configured = !SUPABASE_URL.includes('https://tulbmqcgbxekyykvxyxp.supabase.co');
 let db = null;
-if (configured) db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+if (configured) db = supabase.createClient('https://tulbmqcgbxekyykvxyxp.supabase.co', 'sb_publishable_jKcOCMpTXg0gtYmdZDDzmQ_Lr3Qp_ju');
 else $('cfgWarn').style.display = 'block';
 
 const msg = (t, cls='') => { $('msg').textContent = t; $('msg').className = cls; };
